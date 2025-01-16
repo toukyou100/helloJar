@@ -34,4 +34,13 @@ public class HelloController {
 
 		return "emp";
 	}
+	
+	@RequestMapping(value = "emp2")
+	public String emp2(Model model) {
+
+		List<HelloBean> list = helloService.selectName();
+		model.addAttribute("list", list);
+
+		return "emp2";
+	}
 }
